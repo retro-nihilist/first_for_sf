@@ -1,0 +1,61 @@
+def get_most_frequent_word(text_example):
+
+    def get_words_list(text):
+        punctuation_list = ['.', ',', ';', ':', '...', '!', '?', '-', '"', '(', ')']
+        for i in punctuation_list: text = text.replace(i, "")
+        text = list(text.lower().split(" "))
+        return text
+
+    def get_unique_words(words_list):  return sorted(set(words_list))
+
+    text_clean = get_words_list(text_example)
+
+    text_set = get_unique_words(text_clean)
+
+    text_dict_sort = dict((i, text_clean.count(i)) for i in text_set)
+    #print(text_dict_sort)
+
+    list_text = list(text_dict_sort.items())
+    #print(list_text)
+
+    text_list_sort = sorted(list_text, reverse=True, key=lambda x: x[1])
+    
+    return text_list_sort[0][0]
+
+
+
+    
+
+
+text_example = "Есть урок, который идет не сорок пять минут, а всю жизнь. Этот в в урок проходит и в а а а а а а классе, и в поле, и дома, и в лесу. Я назвал этот урок седьмым потому, что в школе обычно бывает не больше шести уроков. Не удивляйтесь, если я скажу, что учителем на этом уроке может быть и береза возле вашего дома, и бабушка, и вы сами (В. Песков)"
+print(get_most_frequent_word(text_example))
+
+"""Напишите функцию get_most_frequent_word(), которая возвращает наиболее часто встречающееся слово в тексте, 
+переданном в функцию в качестве аргумента text.
+
+Предварительно очистите текст от знаков препинания и приведите его к единому регистру 
+(слова в верхнем и нижнем регистре считаются одним и тем же словом).
+ этом вам может помочь функция get_words_list(), которую мы реализовали ранее.
+   Сделайте её внутренней функцией функции get_most_frequent_word().
+
+Для решения задачи вам также пригодится список уникальных слов в тексте.
+ Чтобы создать его, воспользуйтесь функцией get_unique_words() из предыдущего задания. 
+ Также сделайте её внутренней по отношению к функции get_most_frequent_word().
+
+Примечание. Если в тексте встречаются два слова с одинаковой частотностью, 
+функция должна возвращать то, которое начинается с буквы, стоящей ближе к началу алфавита. 
+Например, если слова «я» и «меня» встречаются одинаковое количество раз, то функция должна вернуть 
+слово «меня».
+
+В случае, если в функцию была передана пустая строка, она также должна возвращать пустую строку.
+
+Примеры работы программы:
+
+
+text_example = "A beginning is the time for taking the most delicate care that the balances are correct. This every sister of the Bene Gesserit knows. To begin your study of the life of Muad'Dib, then take care that you first place him in his time: born in the 57th year of the Padishah Emperor, Shaddam IV. And take the most special care that you locate Muad'Dib in his place: the planet Arrakis. Do not be deceived by the fact that he was born on Caladan and lived his first fifteen years there. Arrakis, the planet known as Dune, is forever his place."
+print(get_most_frequent_word(text_example))
+# the
+
+text_example = "Есть урок, который идет не сорок пять минут, а всю жизнь. Этот урок проходит и в классе, и в поле, и дома, и в лесу. Я назвал этот урок седьмым потому, что в школе обычно бывает не больше шести уроков. Не удивляйтесь, если я скажу, что учителем на этом уроке может быть и береза возле вашего дома, и бабушка, и вы сами (В. Песков)"
+print(get_most_frequent_word(text_example))
+# и"""
