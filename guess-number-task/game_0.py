@@ -1,19 +1,18 @@
 """Игра угадай число"""
 
 import numpy as np
-
-count_list=list()
 #import random
-start = 1   # включительно
-end = 100    # включительно
-per = 1000
+count_list=list()
+import random
+start = 1 # началj диапазоа чисел из которых загадывает компьютер 
+end = 100  # окончание диапазона чисел из котороо загадывает компьютер
+per = 1000 # колличество роверок алгоритма
 while per > 0:
-    number = np.random.randint(start, end) # загадываем число
-    #number = random.randint(start, end)
-    #print("number = ", number)
-    # количество попыток
+    #random.seed(11)
+    number = random.randint(start, end) # загадываем число
+    print("number = ",number)
     count = 0
-    x = (end - start)//2
+    x = (end - start)//2 # 
     s = start
     e = end
     while True:
@@ -34,6 +33,6 @@ while per > 0:
             #print(f"Вы угадали число! Это число = {number}, за {count} попыток")
             break #конец игры выход из цикла
     per = per -1
-    print(count)
+    #print(count)
     count_list.append(count)
 print(max(count_list))
