@@ -4,23 +4,22 @@
 """
 
 import numpy as np
-#import random
-count_list=list()
+#count_list=list() #Использовалось для проверки эффективности алгоритма
 import random
 start = 1  # начало диапазоа чисел из которых загадывает компьютер 
 end = 100  # окончание диапазона чисел из котороо загадывает компьютер
-per = 1 # колличество проверок алгоритма
+per = 1 # колличество проверок алгоритма (1 - проверка откутствует)
 
-while per > 0:
+while per > 0: # цикл для проверок эффективности алгоритма
     number = random.randint(start, end) # загадываем число
     print("Загадано число = ",number)
-    count = 0
-    x = (end - start)//2
-    s = start
-    e = end
+    count = 0            # Счетчик количества попыток угадывания
+    x = (end - start)//2 # Определяем первое число для угадывания
+    s = start            # Фиксируем нижнюю границу диапазона
+    e = end              # Фиксируем верхнюю границу диапазона
 
-    while True:
-        count+=1
+    while True: # Цикл для поиска загаданного числа 
+        count += 1
         predict_number = x
 
         if predict_number > number:
@@ -39,5 +38,5 @@ while per > 0:
 
     per = per -1
     #print(count)
-    count_list.append(count)
-    #print(max(count_list)) #Использовалось для проверки эффективности алгоритма
+    #count_list.append(count) #Использовалось для проверки эффективности алгоритма
+    #print(max(count_list))   #Использовалось для проверки эффективности алгоритма
