@@ -1,8 +1,10 @@
-PROJECT_1_Resume_analysis_from_HeadHunter
+п»їPROJECT_1_Resume_analysis_from_HeadHunter
 https://github.com/retro-nihilist/first_for_sf/tree/main/PROJECT_1_Resume_analysis_from_HeadHunter
 
-Файл с исходными данными (база резюме, выгруженная с сайта поиска вакансий hh.ru.):
+Р¤Р°Р№Р» СЃ РёСЃС…РѕРґРЅС‹РјРё РґР°РЅРЅС‹РјРё (Р±Р°Р·Р° СЂРµР·СЋРјРµ, РІС‹РіСЂСѓР¶РµРЅРЅР°СЏ СЃ СЃР°Р№С‚Р° РїРѕРёСЃРєР° РІР°РєР°РЅСЃРёР№ hh.ru.):
 https://drive.google.com/drive/folders/1vOvzEh-1jP3w-g9HkbLjuk88gKc24UYK?usp=sharing
 
-Выгрузка курсов валют, которые встречаются в наших данных за период с 29.12.2017 по 05.12.2019
+Р’С‹РіСЂСѓР·РєР° РєСѓСЂСЃРѕРІ РІР°Р»СЋС‚, РєРѕС‚РѕСЂС‹Рµ РІСЃС‚СЂРµС‡Р°СЋС‚СЃСЏ РІ РЅР°С€РёС… РґР°РЅРЅС‹С… Р·Р° РїРµСЂРёРѕРґ СЃ 29.12.2017 РїРѕ 05.12.2019
 https://drive.google.com/drive/folders/1vOvzEh-1jP3w-g9HkbLjuk88gKc24UYK?usp=sharing
+
+1
